@@ -42,8 +42,9 @@ function handleResize() {
     const imageRight = document.querySelector("img#women-and-cargo-bikes");
 
     if (imageLeft && imageRight) {
-      imageLeft.src = "/images/mobiles/guom-lake-mobile.png";
-      imageRight.src = "/images/mobiles/women-and-cargo-bikes-mobile.png";
+      imageLeft.src = "./public/images/mobiles/guom-lake-mobile.png";
+      imageRight.src =
+        "./public/images/mobiles/women-and-cargo-bikes-mobile.png";
     }
   }
 }

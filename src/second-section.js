@@ -86,10 +86,10 @@ function handleResize2() {
     const secondImage = document.querySelector("img#non-la-viet-nam");
 
     if (firstImage && secondImage) {
-      firstImage.src = "/images/mobiles/lake-mobile.png";
+      firstImage.src = "./public/images/mobiles/lake-mobile.png";
       firstImage.height = 422;
       firstImage.width = 358;
-      secondImage.src = "/images/mobiles/non-la-mobile.png";
+      secondImage.src = "./public/images/mobiles/non-la-mobile.png";
       secondImage.height = 422;
       secondImage.width = 358;
     }
