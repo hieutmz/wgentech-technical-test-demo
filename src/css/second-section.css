@@ -25,6 +25,7 @@ div#second-section-component {
   color: #1f1f1f;
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: fit-content;
 }
 .second-section-first__right-panel {
@@ -90,6 +91,17 @@ div#second-section-component {
   margin: 0;
 }
 
+@media (min-width: 700px) {
+  .first-section-component__image-description {
+    flex-wrap: wrap;
+  }
+  .second-section-second__left-panel,
+  .second-section-first__right-panel {
+    max-width: 684px;
+    width: 684px;
+  }
+}
+
 @media (min-width: 1440px) {
   .second-section-second-panel {
     flex-direction: row;
@@ -110,6 +122,7 @@ div#second-section-component {
     flex-direction: column;
     gap: 24px;
     height: fit-content;
+    width: fit-content;
   }
   .second-section-second__left-panel {
     padding: 372px 47.5px 70px 49.5px;

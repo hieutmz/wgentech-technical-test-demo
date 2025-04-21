@@ -21,6 +21,8 @@ div#first-section-component {
 
 .first-section-component__image-description {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 4px;
   margin: 0 8.23px 0 8.23px;
 }
@@ -48,6 +50,11 @@ div#first-section-component {
   text-align: center;
   margin: 0;
 }
+@media (min-width: 700px) {
+  .first-section-component__image-description {
+    flex-wrap: wrap;
+  }
+}
 
 @media (min-width: 1440px) {
   div#first-section-component {
@@ -57,6 +64,7 @@ div#first-section-component {
     margin: 0 325px 0 325px !important;
     gap: 32px !important;
     padding: 41px 0;
+    flex-wrap: nowrap;
   }
   .first-section-component__description {
     margin: 0 315px 0 315px !important;

@@ -144,28 +144,31 @@
 
     <script>
       function handleResize() {
-        if (window.innerWidth === 375 || window.outerWidth === 375) {
-          const imageLeft = document.querySelector("img#image-guom-lake");
-          const imageRight = document.querySelector(
-            "img#women-and-cargo-bikes"
-          );
-          const firstImage = document.querySelector("img#lake");
-          const secondImage = document.querySelector("img#non-la-viet-nam");
+        const imageLeft = document.querySelector("img#image-guom-lake");
+        const imageRight = document.querySelector("img#women-and-cargo-bikes");
+        const firstImage = document.querySelector("img#lake");
+        const secondImage = document.querySelector("img#non-la-viet-nam");
+        if (!firstImage || !secondImage || !imageLeft || !imageRight) return;
+        if (window.innerWidth <= 700 || window.outerWidth <= 700) {
+          firstImage.src = "./public/images/mobiles/lake-mobile.png";
+          firstImage.height = 422;
+          firstImage.width = 358;
+          secondImage.src = "./public/images/mobiles/non-la-mobile.png";
+          secondImage.height = 422;
+          secondImage.width = 358;
 
-          if (firstImage && secondImage) {
-            firstImage.src = "./public/images/mobiles/lake-mobile.png";
-            firstImage.height = 422;
-            firstImage.width = 358;
-            secondImage.src = "./public/images/mobiles/non-la-mobile.png";
-            secondImage.height = 422;
-            secondImage.width = 358;
-          }
-
-          if (imageLeft && imageRight) {
-            imageLeft.src = "./public/images/mobiles/guom-lake-mobile.png";
-            imageRight.src =
-              "./public/images/mobiles/women-and-cargo-bikes-mobile.png";
-          }
+          imageLeft.src = "./public/images/mobiles/guom-lake-mobile.png";
+          imageRight.src =
+            "./public/images/mobiles/women-and-cargo-bikes-mobile.png";
+        } else {
+          firstImage.src = "./public/images/image-2.png";
+          firstImage.height = 800;
+          firstImage.width = 684;
+          secondImage.src = "./public/images/image-3.png";
+          secondImage.height = 800;
+          secondImage.width = 684;
+          imageLeft.src = "./public/images/image-4.png";
+          imageRight.src = "./public/images/image-1.png";
         }
       }
       window.addEventListener("resize", handleResize);
